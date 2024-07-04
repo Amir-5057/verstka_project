@@ -1,4 +1,5 @@
 *{
+    font-family: "Roboto", sans-serif;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -120,6 +121,7 @@ header{
 }
 
 .span3{
+
     color: #A0A0A0;
     font-size: 14px;
     
@@ -135,6 +137,8 @@ header{
     font-size: 13px;
     margin-bottom: 81px;
 }
+
+
 
 /* leding2 end */
 
@@ -262,8 +266,8 @@ header{
 /* leading5 start */
 
 .img2{
-    width: 100vw;
-    height: 630px; 
+    width: 100%;
+    height: 630px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -309,6 +313,7 @@ header{
 
 
 .text-in-img2 p{
+    width: 350px;
     font-size: 14px;
     line-height: 16px;
     margin-bottom: calc(1.1vw + 14.8px);
@@ -344,11 +349,17 @@ header{
 
 .hard-way p{
     color: #A0A0A0;
-    width: calc(13.9vw + 577px);
-    height: calc(1.3vw + 57.7px);
+    width: 777px;
     font-size: 16px;
     margin-bottom: calc(1.1vw + 6.4px) ;
+    line-height: 24px;
 
+}
+
+@media(max-width:500px){
+    .hard-way p{
+        width: 350px;
+    }
 }
 
 
@@ -361,9 +372,9 @@ header{
     margin-bottom: calc(1.6vw + 14.5px);
 }
 
-.house img{
-    width: 100%;
-}
+/* .house img{
+    width: 1052px;
+} */
 
 
 .make-work{
@@ -381,23 +392,34 @@ header{
 
 .make-work p{
     color: #A0A0A0;
-    width: calc(2.4vw + 400px);
-    height: calc(2.4vw + 13.5px);
+    width: 789px;
     font-size: 16px;
     margin-bottom: calc(2.4vw + 44px) ;
+    line-height: 16px;
 
+}
+
+@media (max-width:500px){
+    .house img{
+        width: 100%;
+    }
+
+    .make-work p{
+        width: 345px;
+    }
 }
 
 
 
 .container{
     display: grid;
-    grid-template-columns: repeat(6, 3fr);
+    grid-template-columns: repeat(6, 1fr);
     gap: 27px 30px;
-    margin-left: 50px;
-
     margin-bottom: calc(1.7vw + 72.1px);
+}
 
+.container img{
+    width: 100%;
 }
 
 
@@ -473,12 +495,38 @@ header{
 
 }
 
-.footer{
-    margin-top: 40px;
+
+
+
+footer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
     background-color: #F9F9F9;
 
 }
-.footer-text{
+
+.footer-family{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.footer-family .footer-start{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 77px;
+    
+
+}
+
+.footer-family .footer-end{
     width: 82px;
     height: 82px;
     background-color: #000000;
@@ -488,54 +536,31 @@ header{
     align-items: center;
     font-size: 15px;
     position: relative;
-    left: 1500px;
-    right: 50px;
-
-
+    right: 50px; 
 
 }
 
-
-.footer-left{
-   
+.footer-center{
     display: flex;
     flex-direction: column;
-    align-items: start;
-    justify-content: start;
-    margin-left: calc(1.7vw + 28.3px);
-    
-}
-
-.footer-left a{
-    margin: 16px;
-    color: #000000;
+    /* justify-content: flex-start;
+    align-items: center; */
+    gap: 10px;
+    margin-bottom: 20px;
+    margin-top: 77px;
 }
 
 
-
-.footer-container{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
-}
-
-
-.footer-container{
-    font-size: calc(0.5vw + 15px);
-    line-height: calc(0.9vw + 11.5px);
-    margin-bottom: calc(0.6vw + 14.6px);
-}
-
-.footer-container p{
+.footer-center p{
     width: 348px;
-    height: 64px;
-    margin: 23px;
+    margin-bottom: calc(1.1vw + 14.4px);
     font-size: 14px;
     line-height: 16px;
 
 }
+
+
+
 
 
 
@@ -555,28 +580,31 @@ header{
 
 .footer-info p{
     margin-right: 50px;
-}
+  
+} 
 
-@media(max-width:500px){
+@media (max-width: 500px) {
 
-    .footer-text{
+    .footer-family{
+        flex-direction: column;
+    }
+    .footer-family .footer-end {
         display: none;
     }
-    .footer-left{
+
+    .footer-family .footer-start{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
  
         margin-left: 0%;
-        
-
     }
 
-    .footer-container{
+
+    .footer-center{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         margin-top: 50px;
-    }
-
-    .footer-container img{
-        margin-bottom: 10px;
     }
 
     .footer-info{
@@ -585,6 +613,14 @@ header{
         align-items: center;
         margin-left: 55px;
     }
-}
+
+} 
+
+
+
+
+
+
+
 
 
